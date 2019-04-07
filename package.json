@@ -21,6 +21,7 @@
     "core-js": "^3.0.1",
     "next-compose-plugins": "^2.1.1",
     "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^3.6.0",

@@ -1,0 +1,9 @@
+// ------------------------------------- //
+// Style of Mixins
+// ------------------------------------- //
+$mobile: 720px;
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
