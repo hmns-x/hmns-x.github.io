@@ -17,9 +17,9 @@ class MyApp extends App {
     return (
       <Container>
         <Head>
-          <title>️Colorization</title>
+          <title>HMNS_X</title>
           <meta name="description" content="" />
-          <link rel="icon" href={'static/images/favicon.ico'} type="image/x-icon"/>
+          {/*<link rel="icon" href={'static/images/favicon.ico'} type="image/x-icon"/>*/}
         </Head>
         <Component {...pageProps} />
       </Container>
