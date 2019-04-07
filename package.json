@@ -22,6 +22,7 @@
     "next-compose-plugins": "^2.1.1",
     "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
+    "push-dir": "^0.4.1",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^3.6.0",
@@ -30,6 +31,8 @@
   "scripts": {
     "dev": "next src",
     "build": "next build src",
-    "export": "next build src && next export -o out src"
+    "export": "next build src && next export -o out src",
+    "push": "push-dir --dir=out --branch=gh-pages --cleanup --verbose",
+    "deploy": "yarn export && yarn push"
   }
 }
