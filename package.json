@@ -32,7 +32,7 @@
     "dev": "next src",
     "build": "next build src",
     "export": "next build src && next export -o out src",
-    "push": "push-dir --dir=out --branch=gh-pages --cleanup --verbose",
+    "push": "push-dir --dir=out --branch=master --cleanup --verbose",
     "deploy": "yarn export && yarn push"
   }
 }
