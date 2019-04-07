@@ -31,7 +31,7 @@
   "scripts": {
     "dev": "next src",
     "build": "next build src",
-    "export": "next build src && next export -o out src",
+    "export": "next build src && next export -o out src && touch out/.nojekyll",
     "push": "push-dir --dir=out --branch=master --cleanup --verbose",
     "deploy": "yarn export && yarn push"
   }
