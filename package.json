@@ -9,11 +9,14 @@
     "intersection-observer": "^0.5.1",
     "next": "^8.0.4",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-three-fiber": "^2.0.1",
+    "three": "^0.103.0"
   },
   "devDependencies": {
     "@types/next": "^8.0.3",
     "@types/react": "^16.8.12",
+    "@types/three": "^0.93.30",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "@zeit/next-typescript": "^1.1.1",

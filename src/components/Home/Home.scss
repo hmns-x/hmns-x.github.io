@@ -9,11 +9,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .Title {
+  background-color: white;
+  transition: background-color .4s ease-in;
+  &.active {
+    background-color: black;
+  }
+  .Honmonos, .HMNS_X {
     font-size: 96px;
   }
+  .Honmonos {
+    color: #000;
+    opacity: 1;
+    transform: scale(.4);
+    transition: opacity .4s ease-out;
+    &.active {
+      opacity: 0;
+    }
+  }
+  .HMNS_X {
+    color: white;
+    opacity: 0;
+    transform: scale(.8);
+    transition: opacity .6s ease-out, transform 4s cubic-bezier(0.19, 1, 0.22, 1);
+    &.active {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+  .Fx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   @include mobile {
-    .Title {
+    .Honmonos, .HMNS_X {
       font-size: 48px;
     }
   }
