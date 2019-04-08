@@ -6,6 +6,7 @@
   "author": "codemilli <codemilli@webtoonscorp.com>",
   "license": "MIT",
   "dependencies": {
+    "classcat": "^3.2.5",
     "intersection-observer": "^0.5.1",
     "next": "^8.0.4",
     "react": "^16.8.6",

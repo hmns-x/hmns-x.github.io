@@ -1,21 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
+import cc from 'classcat';
 import css from './Home.scss';
-// import MainFX from "./components/MainFX/MainFX"
-import ThreeCanvas from "./components/ThreeCanvas/ThreeCanvas"
 
 interface Props {}
 
 const useAnimation = () => {
-  const wrapRef = useRef<HTMLDivElement>();
-  const hmnsRef = useRef<HTMLDivElement>();
-  const hmnsxRef = useRef<HTMLDivElement>();
+  const [scene1, setScene1] = useState(false);
+  const [scene2, setScene2] = useState(false);
   useEffect(() => {
     const hmnsTimeout = setTimeout(() => {
-      hmnsRef.current.classList.add(css.active);
-      wrapRef.current.classList.add(css.active);
+      setScene1(true);
     }, 1400);
     const hmnsxTimeout = setTimeout(() => {
-      hmnsxRef.current.classList.add(css.active);
+      setScene2(true);
     }, 2200);
     return () => {
       clearTimeout(hmnsTimeout);
@@ -23,27 +20,28 @@ const useAnimation = () => {
     };
   }, []);
   return {
-    wrapRef,
-    hmnsRef,
-    hmnsxRef,
+    scene1,
+    scene2,
   };
 }
 
 const Home: React.FC<Props> = () => {
-  const {wrapRef, hmnsRef, hmnsxRef} = useAnimation();
+  const {scene1, scene2} = useAnimation();
   return (
-    <div ref={wrapRef} className={css.Home}>
+    <div className={cc({
+      [css.Home]: true,
+      [css.Scene1]: scene1,
+      [css.Scene2]: scene2,
+    })}>
       <div className={css.Fx}>
-        <span ref={hmnsRef} className={css.Honmonos}>Honmonos</span>
+        <span className={css.Honmonos}>
+          Honmonos
+        </span>
       </div>
       <div className={css.Fx}>
-        <span ref={hmnsxRef} className={css.HMNS_X}>HMNS_X</span>
-      </div>
-      <div className={css.Fx}>
-        {/*<MainFX/>*/}
-      </div>
-      <div className={css.Fx}>
-        {/*<ThreeCanvas/>*/}
+        <span className={css.HMNS_X}>
+          HMNS_X
+        </span>
       </div>
     </div>
   );

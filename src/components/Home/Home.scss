@@ -11,8 +11,17 @@
   align-items: center;
   background-color: white;
   transition: background-color .4s ease-in;
-  &.active {
+  &.Scene1 {
     background-color: black;
+    .Honmonos {
+      opacity: 0;
+    }
+  }
+  &.Scene2 {
+    .HMNS_X {
+      opacity: 1;
+      transform: scale(1.3);
+    }
   }
   .Honmonos, .HMNS_X {
     font-size: 116px;
@@ -22,19 +31,12 @@
     opacity: 1;
     transform: scale(.4);
     transition: opacity .4s ease-out;
-    &.active {
-      opacity: 0;
-    }
   }
   .HMNS_X {
     color: white;
     opacity: 0;
     transform: scale(.8);
     transition: opacity .6s ease-out, transform 7s cubic-bezier(0.19, 1, 0.22, 1);
-    &.active {
-      opacity: 1;
-      transform: scale(1.3);
-    }
   }
   .Fx {
     position: absolute;
